@@ -11,7 +11,6 @@ LABEL "com.github.actions.description"="Actions used by OwnersRoom"
 LABEL "com.github.actions.icon"="eye"
 LABEL "com.github.actions.color"="blue"
 
-COPY entrypoint.sh LICENCE README.md /
-COPY filters .
+COPY entrypoint.sh filters LICENCE README.md /
 
 ENTRYPOINT ["/entrypoint.sh"]

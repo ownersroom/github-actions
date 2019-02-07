@@ -9,4 +9,4 @@ fi
 
 filter=$1
 shift
-sh -c "python3 filters/$filter.py $*"
+sh -c "python3 /filters/$filter.py $*"
