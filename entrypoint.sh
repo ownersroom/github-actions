@@ -7,4 +7,6 @@ if [ -z $1 ]; then
     exit 1
 fi
 
-sh -c "python3 filters/$1.py ${@:2}"
+filter=$1
+shift
+sh -c "python3 filters/$filter.py $*"
