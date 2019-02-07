@@ -1,7 +1,9 @@
 FROM python:3.7.2-slim
 
 LABEL "name"="filter"
-LABEL "maintainer"="OwnersRoom <hello@ownersroom.com>"
+LABEL "maintainer"="OwnersRoom AS <hello@ownersroom.com>"
+LABEL "repository"="https://github.com/ownersroom/github-actions"
+LABEL "homepage"="https://github.com/ownersroom/github-actions"
 LABEL "version"="1.0.0"
 
 LABEL "com.github.actions.name"="OwnersRoom Actions"
