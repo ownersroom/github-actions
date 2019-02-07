@@ -10,7 +10,7 @@ Continue if the event is a tag.
 
 ```workflow
 action "file-filter" {
-  uses = "OwnersRoom/github-actions@master"
+  uses = "ownersroom/github-actions@master"
   args = "file src/**/* dist/* ./file.txt"
 }
 ```
