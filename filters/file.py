@@ -6,6 +6,7 @@ import sys
 
 
 def filter(args):
+    debug = bool(os.getenv("DEBUG", default=False))
     eventFile = os.getenv("GITHUB_EVENT_PATH")
     try:
         with open(eventFile, mode="r", encoding="utf-8") as file:
@@ -20,8 +21,15 @@ def filter(args):
                 ]
             for filechange in filechanges:
                 for pattern in args.patterns:
+                    if debug:
+                        print(f"Comparing {filechange} to {pattern}")
                     if fnmatch.fnmatch(filechange, pattern):
+                        if debug:
+                            print(
+                                f"Found match: {filechange} <-> {pattern}\nReturning...")
                         return 0
+            if debug:
+                print("No match")
             return 78
     except IOError:
         print(eventFile, "not found")
