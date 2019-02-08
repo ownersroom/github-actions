@@ -15,6 +15,18 @@ action "file-filter" {
 }
 ```
 
+Optionally add the `DEBUG` environment variable to get information about comparisons made by the filter.
+
+```workflow
+action "file-filter" {
+  ...
+  env = {
+    DEBUG = "true"
+  }
+  ...
+}
+```
+
 ## License
 
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT License](LICENSE).
